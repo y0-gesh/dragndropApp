@@ -12,7 +12,44 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.navbar{
+  background-color: #377aff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+.funcBtn{
+  margin-right: 40px;
+  z-index: 1000;
+  cursor: pointer;
+}
+.funcBtn button{
+  z-index: 1000;
+  cursor: pointer;
+}
+.navbar li a{
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.navbar li a:hover{
+  color: #f1f1f1;
+}
+.navbar ul{
+  display: flex;
+  list-style: none;
+  cursor: pointer;
+  -webkit-app-region: drag;
 
+}
+.navbar li {
+  list-style: none;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
