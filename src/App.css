@@ -1,35 +1,24 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 .navbar{
   background-color: #377aff;
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
   width: 100%;
+  height: 25px;
   position: absolute;
   top: 0;
   z-index: 10;
 }
 .funcBtn{
-  margin-right: 40px;
+  margin-right: 0px;
   z-index: 1000;
   cursor: pointer;
+  display: flex;
 }
 .funcBtn button{
   z-index: 1000;
+  width: 25px;
   cursor: pointer;
 }
 .navbar li a{
@@ -40,36 +29,18 @@
 .navbar li a:hover{
   color: #f1f1f1;
 }
-.navbar ul{
-  display: flex;
-  list-style: none;
-  cursor: pointer;
+.navbar .drag-header{
+  width: 100%;
+  /* background-color: greenyellow; */
   -webkit-app-region: drag;
 
 }
 .navbar li {
   list-style: none;
 }
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.drop_area{
+  margin-top: 50px;
+  margin-left: 60px;
 }

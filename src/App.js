@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-// import "./components/appFunctions";
+import DropArea from "./components/DropArea";
 
 function App() {
   const minimizeBtnRef = useRef(null);
@@ -55,23 +54,7 @@ function App() {
   return (
     <div className="App">
       <nav className="navbar">
-        <ul>
-          <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              Learn React
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              React Documentation
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              React Community
-            </a>
-          </li>
-        </ul>
+        <div className="drag-header"></div>
         <div className="funcBtn">
           <button id="minimizeBtn" ref={minimizeBtnRef}>
             -
@@ -84,19 +67,9 @@ function App() {
           </button>
         </div>
       </nav>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+      <div className="drop_area">
+        <DropArea />
+      </div>
     </div>
   );
 }
