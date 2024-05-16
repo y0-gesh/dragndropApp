@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import "./components/appFunctions";
+// import "./components/appFunctions";
 
 function App() {
   const minimizeBtnRef = useRef(null);
@@ -18,21 +18,12 @@ function App() {
         window.api.send("minimizeApp");
       });
     }
+   
     if (maximizeBtn) {
-      maximizeBtn.addEventListener('click', () => {
-        if (window.api.isMaximized()) {
-          window.api.send('unmaximizeApp'); // Send IPC message to unmaximize
-        } else {
-          window.api.send('maximizeApp'); // Send IPC message to maximize
-        }
+      maximizeBtn.addEventListener("click", () => {
+        window.api.send("toggleMaximizeApp");
       });
     }
-    // if (maximizeBtn) {
-    //   maximizeBtn.addEventListener("click", () => {
-    //     window.api.send("maximizeApp");
-    //   });
-    // }
-
     if (closeBtn) {
       closeBtn.addEventListener("click", () => {
         window.api.send("closeApp");
@@ -47,14 +38,10 @@ function App() {
         });
       }
 
+
       if (maximizeBtn) {
         maximizeBtn.removeEventListener("click", () => {
-          if (window.api.isMaximized()) {
-            window.api.send('unmaximizeApp'); // Send IPC message to unmaximize
-          } else {
-            window.api.send('maximizeApp'); // Send IPC message to maximize
-          }
-          // window.api.send("maximizeApp");
+          window.api.send("toggleMaximizeApp");
         });
       }
 

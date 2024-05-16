@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (maximizeBtn) {
-    maximizeBtn.addEventListener('click', () => {
-      window.api.send('maximizeApp');
-    });
-  }
+  // if (maximizeBtn) {
+  //   maximizeBtn.addEventListener('click', () => {
+  //     window.api.send('maximizeApp');
+  //   });
+  // }
 
   if (closeBtn) {
     closeBtn.addEventListener('click', () => {

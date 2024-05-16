@@ -24,24 +24,17 @@ const createWindow = () => {
     win.minimize();
   });
 
-//   ipc.on("maximizeApp", (event) => {
-//     if (!win.isMaximized()) {
-//       win.maximize();
-//       // win.restore();
-//       console.log("Maximizing");
-//     } else {
-//       win.unmaximize();
-//       // win.restore();
-//       console.log("UnMaximizing");
-//     }
-//   });
+  ipc.on("toggleMaximizeApp", (event) => {
+    if (win.isMaximized()) {
+      win.unmaximize();
+    } else {
+      win.maximize();
+    }
+  });
+  ipc.handle('get-window-maximized-state', async () => {
+    return win.isMaximized();
+  });
 
-  ipc.on("maximizeApp", (event) => {
-    win.maximize();
-  });
-  ipc.on("unmaximizeApp", (event) => {
-    win.unmaximize();
-  });
 
   ipc.on("closeApp", (event) => {
     win.close();
