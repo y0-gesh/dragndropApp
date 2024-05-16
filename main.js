@@ -1,4 +1,3 @@
-
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("node:path");
 const ipc = ipcMain;
@@ -31,10 +30,6 @@ const createWindow = () => {
       win.maximize();
     }
   });
-  ipc.handle('get-window-maximized-state', async () => {
-    return win.isMaximized();
-  });
-
 
   ipc.on("closeApp", (event) => {
     win.close();

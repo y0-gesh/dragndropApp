@@ -18,12 +18,14 @@ function App() {
         window.api.send("minimizeApp");
       });
     }
-   
+    const maximizeApp = () => {
+      window.api.send("toggleMaximizeApp");
+    };
+
     if (maximizeBtn) {
-      maximizeBtn.addEventListener("click", () => {
-        window.api.send("toggleMaximizeApp");
-      });
+      maximizeBtn.addEventListener("click", maximizeApp);
     }
+
     if (closeBtn) {
       closeBtn.addEventListener("click", () => {
         window.api.send("closeApp");
@@ -38,11 +40,8 @@ function App() {
         });
       }
 
-
       if (maximizeBtn) {
-        maximizeBtn.removeEventListener("click", () => {
-          window.api.send("toggleMaximizeApp");
-        });
+        maximizeBtn.removeEventListener("click", maximizeApp);
       }
 
       if (closeBtn) {
