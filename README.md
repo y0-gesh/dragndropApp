@@ -19,11 +19,11 @@ To install the project, follow these steps:
 
 1. Clone the repository:
     ```
-    git clone https://github.com/yourusername/your-repo-name.git
+    git clone https://github.com/y0-gesh/dragndropApp.git
     ```
 2. Navigate into the project directory:
     ```
-    cd your-repo-name
+    cd dragndropApp
     ```
 3. Install the dependencies:
     ```
@@ -51,8 +51,5 @@ If you want to contribute to this project, please fork this repository and creat
 
 ## Contact
 
-If you want to contact me, you can reach me at `your-email@domain.com`.
+If you want to contact me, you can reach me at `yogeshtandan25@gmail.com`.
 
-## License
-
-This project uses the following license: `license name`.
