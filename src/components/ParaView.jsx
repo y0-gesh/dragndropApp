@@ -1,6 +1,11 @@
 import React from "react";
 import "./ParaView.css";
 import AvkalanLabs from "../assets/avkalanlabsjpg.jpg";
+import mesh from "../assets/casino.svg";
+import casino from "../assets/casino.svg";
+import line from "../assets/cross_x.svg";
+import triangle from "../assets/cross_x.svg";
+import arrowRight from "../assets/right_arrow.svg";
 
 const ParaView = () => {
   return (
@@ -21,10 +26,34 @@ const ParaView = () => {
           <div className="out_container">
             <label htmlFor="">Output files</label>
             <ul>
-              <li className="output_list">mesh.xdmf</li>
-              <li className="output_list">points.xdmf</li>
-              <li className="output_list">lines.xdmf</li>
-              <li className="output_list">triangles.xdmf</li>
+              <li className="output_list">
+                <div>
+                  <img src={mesh} className="" alt="mesh" />
+                  <span>mesh.xdmf</span>
+                </div>
+                <img src={arrowRight} className="" alt="right" />
+              </li>
+              <li className="output_list">
+                <div>
+                  <img src={casino} className="" alt="mesh" />
+                  <span>points.xdmf</span>
+                </div>
+                <img src={arrowRight} className="" alt="right" />
+              </li>
+              <li className="output_list">
+                <div>
+                  <img src={line} className="" alt="mesh" />
+                  <span>lines.xdmf</span>
+                </div>
+                <img src={arrowRight} className="" alt="right" />
+              </li>
+              <li className="output_list">
+                <div>
+                  <img src={triangle} className="" alt="mesh" />
+                  <span>triangles.xdmf</span>
+                </div>
+                <img src={arrowRight} className="" alt="right" />
+              </li>
             </ul>
           </div>
         </div>

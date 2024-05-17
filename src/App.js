@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from "react";
 import "./App.css";
 import DropArea from "./components/DropArea";
 import ParaView from "./components/ParaView";
+import minimizeWin from "./assets/minimize_window.svg";
+import maximizeWin from "./assets/maximize_window.svg";
+import closeWin from "./assets/close.svg";
 
 function App() {
   const minimizeBtnRef = useRef(null);
@@ -57,14 +60,14 @@ function App() {
       <nav className="navbar">
         <div className="drag-header"></div>
         <div className="funcBtn">
-          <button id="minimizeBtn" ref={minimizeBtnRef}>
-            -
+          <button id="minimizeBtn" className="bn3637 bn38" ref={minimizeBtnRef}>
+            <img src={minimizeWin} className="minimize_win" alt="minimize" />
           </button>
           <button id="maximizeBtn" ref={maximizeBtnRef}>
-            =
+            <img src={maximizeWin} className="maximize_win" alt="maximize" />
           </button>
           <button id="closeBtn" ref={closeBtnRef}>
-            x
+            <img src={closeWin} className="close_win" alt="close" />
           </button>
         </div>
       </nav>

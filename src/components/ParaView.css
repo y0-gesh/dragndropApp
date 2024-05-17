@@ -36,7 +36,7 @@
 }
 .in_out_container {
   background-color: var(--fillcontainer-color);
-  height: 300px;
+  height: 320px;
   width: 100%;
   border-radius: 20px;
   padding: 20px;
@@ -61,7 +61,7 @@
 
 .out_container {
   box-sizing: border-box;
-  height: 160px;
+  height: 170px;
   margin-top: 30px;
 }
 .out_container ul {
@@ -98,4 +98,16 @@
   
   .bn4:hover {
    background-color: rgb(31, 135, 255);
+  }
+  .output_list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .output_list div{
+    display: flex;
+    align-items: center;
+  }
+  .output_list div span{
+    margin-left: 10px;
   }
