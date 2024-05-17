@@ -3,15 +3,17 @@
   --backgroundfill-color: rgb(25, 25, 26);
   --fillcontainer-color: rgb(43, 44, 46);
   --text-color: white;
-  --subtext-color: rgb(78, 79, 80);
+  --subtext-color: rgb(151, 151, 151);
   --droparea-color: rgb(0, 117, 255);
 
 }
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+  background-color: var(--background-color);
 }

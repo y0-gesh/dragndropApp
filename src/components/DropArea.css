@@ -1,39 +1,76 @@
-.drop-area-container{
-    background-color: var(--backgroundfill-color);
-    height: 300px;
-    width: 300px;
-    color: var(--text-color);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.drop-area-container {
+  background-color: var(--backgroundfill-color);
+  height: 300px;
+  width: 300px;
+  color: var(--text-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.drop_circle{
-    background-color: var(--droparea-color);
-    height: 80%;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-right: 10px solid yellow;
-    border-left: 10px solid red;
-    /* border-radius: 50% 50%; */
-    border-radius: 50%;
-    border-top: 10px solid yellow;
-    border-bottom: 10px solid red;
-    transform: rotate(45deg);
-
+.drop_circle {
+  background-color: var(--droparea-color);
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border-right: 10px solid rgb(254, 188, 46);
+  border-top: 10px solid rgb(254, 188, 46);
+  border-left: 10px solid rgb(89, 89, 90);
+  border-bottom: 10px solid rgb(89, 89, 90);
+  transform: rotate(45deg);
 }
-.drop_circle_inside{
-    transform: rotate(-45deg);
+.drop_circle_inside {
+  transform: rotate(-45deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.drop_para {
+  margin: 14px 40px;
+  text-align: center;
+  font-size: medium;
+}
+.dropzone {
+  overflow: auto;
+  box-sizing: border-box;
+}
+.drop-area-container .actions {
+  position: sticky;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+.drop-area-container .upload{
+    max-width: 65%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.drop_para{
-    margin: 0 40px;
-    text-align: center;
+.drop-area-container .upload ul {
+  list-style-type: circle;
 }
-button{
-    text-decoration: none;
+
+.actions .bn3 {
+  display: inline-block;
+  padding: 0.5em 1.7em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgb(107, 167, 252);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: var(--droparea-color);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.actions .bn3:hover {
+  color: white;
+  background-color: var(--backgroundfill-color);
 }

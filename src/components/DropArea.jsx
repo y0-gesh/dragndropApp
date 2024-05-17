@@ -20,15 +20,17 @@ const DropArea = () => {
 
   if (files)
     return (
-      <div className="upload">
-        <ul>
-          {Array.from(files).map((file, index) => (
-            <li key={index}>{file.name}</li>
-          ))}
-        </ul>
-        <div className="actions">
-          <button onClick={handleUpload}>Upload</button>
-          <button onClick={() => setFiles(null)}>Cancel</button>
+      <div className="drop-area-container dropzone">
+        <div className="upload">
+          <ul>
+            {Array.from(files).map((file, index) => (
+              <li key={index}>{file.name}</li>
+            ))}
+          </ul>
+          <div className="actions">
+            <button className="bn3" onClick={handleUpload}>Upload</button>
+            <button className="bn3" onClick={() => setFiles(null)}>Cancel</button>
+          </div>
         </div>
       </div>
     );
@@ -37,13 +39,11 @@ const DropArea = () => {
     <>
       {!files && (
         <div
-          className="drop-area-container dropzone"
+          className="drop-area-container "
           onDragOver={handleDrapOver}
           onDrop={handleDrop}>
-          <div className="drop_circle">
-            <div
-              className="drop_circle_inside"
-              onClick={() => inputRef.current.click()}>
+          <div className="drop_circle" onClick={() => inputRef.current.click()}>
+            <div className="drop_circle_inside">
               <input
                 type="file"
                 multiple
@@ -51,7 +51,7 @@ const DropArea = () => {
                 hidden
                 ref={inputRef}
               />
-              <img src={uploadImg} alt="upload" />
+              <img src={uploadImg} className="upload_icon" alt="upload" />
               <p className="drop_para">Drag and Drop your MES mesh here</p>
             </div>
           </div>

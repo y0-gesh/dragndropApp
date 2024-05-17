@@ -40,7 +40,15 @@
 }
 
 
+.app_container{
+  display: flex;
+  justify-content: space-evenly;
+}
 .drop_area{
   margin-top: 50px;
-  margin-left: 60px;
+  /* margin-left: 60px; */
+}
+.para_view{
+  margin-top: 50px;
+  
 }

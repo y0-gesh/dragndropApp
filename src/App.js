@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./App.css";
 import DropArea from "./components/DropArea";
+import ParaView from "./components/ParaView";
 
 function App() {
   const minimizeBtnRef = useRef(null);
@@ -67,8 +68,13 @@ function App() {
           </button>
         </div>
       </nav>
-      <div className="drop_area">
-        <DropArea />
+      <div className="app_container">
+        <div className="drop_area">
+          <DropArea />
+        </div>
+        <div className="para_view">
+          <ParaView />
+        </div>
       </div>
     </div>
   );
