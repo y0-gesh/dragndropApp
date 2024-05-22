@@ -1,9 +1,11 @@
 import React, { useRef, useState } from "react";
 import "./DropArea.css";
 import uploadImg from "../assets/upload.svg";
+import ParaView from "./ParaView";
+import { useStateContext } from "../context/ContextProvider";
 
 const DropArea = () => {
-  const [files, setFiles] = useState(null);
+  const {files, setFiles} = useStateContext();
   const inputRef = useRef(null);
 
   const handleDrapOver = (e) => {
@@ -16,22 +18,25 @@ const DropArea = () => {
     setFiles(files);
   };
 
-  const handleUpload = () => {};
+  // const handleUpload = () => {};
 
   if (files)
     return (
-      <div className="drop-area-container dropzone">
-        <div className="upload">
-          <ul>
-            {Array.from(files).map((file, index) => (
-              <li key={index}>{file.name}</li>
-            ))}
-          </ul>
-          <div className="actions">
-            <button className="bn3" onClick={handleUpload}>Upload</button>
-            <button className="bn3" onClick={() => setFiles(null)}>Cancel</button>
-          </div>
-        </div>
+      // <div className="drop-area-container dropzone">
+      //   <div className="upload">
+      //     <ul>
+      //       {Array.from(files).map((file, index) => (
+      //         <li key={index}>{file.name}</li>
+      //       ))}
+      //     </ul>
+      //     <div className="actions">
+      //       <button className="bn3" onClick={handleUpload}>Upload</button>
+      //       <button className="bn3" onClick={() => setFiles(null)}>Cancel</button>
+      //     </div>
+      //   </div>
+      // </div>
+      <div className="para_view">
+        <ParaView files={files} />
       </div>
     );
 

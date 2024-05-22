@@ -7,7 +7,20 @@ import line from "../assets/cross_x.svg";
 import triangle from "../assets/cross_x.svg";
 import arrowRight from "../assets/right_arrow.svg";
 
-const ParaView = () => {
+import { useStateContext } from "../context/ContextProvider";
+
+const ParaView = (props) => {
+  const { setFiles } = useStateContext();
+
+  const handleCancel = (e) => {
+    e.preventDefault();
+    setFiles(null);
+  };
+
+  
+
+  const handleUpload = () => {};
+
   return (
     <div className="para-view-container">
       <div className="page_container">
@@ -20,7 +33,10 @@ const ParaView = () => {
           <div className="input_container">
             <label htmlFor="">Input file</label>
             <ul>
-              <li className="input_list">beam.med</li>
+              {/* <li className="input_list">beam.med</li> */}
+              {Array.from(props.files).map((file, index) => (
+                <li key={index}>{file.name}</li>
+              ))}
             </ul>
           </div>
           <div className="out_container">
@@ -58,10 +74,13 @@ const ParaView = () => {
           </div>
         </div>
         <div className="para_button">
-          <button type="button" className="bn4 cancel-btn">
+          <button
+            type="button"
+            className="bn4 cancel-btn"
+            onClick={handleCancel}>
             Cancel
           </button>
-          <button type="button" className="bn4 para-btn">
+          <button type="button" className="bn4 para-btn" onClick={handleUpload}>
             Open in ParaView
           </button>
         </div>

@@ -75,9 +75,9 @@ function App() {
         <div className="drop_area">
           <DropArea />
         </div>
-        <div className="para_view">
+        {/* <div className="para_view">
           <ParaView />
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -56,10 +56,13 @@
 
 .app_container {
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
 }
 .drop_area {
-  margin-top: 50px;
+  /* margin-top: 150px; */
   /* margin-left: 60px; */
 }
 .para_view {
