@@ -3,12 +3,41 @@
   height: 600px;
   width: 450px;
   padding: 30px;
+  padding-top: 15px;
   color: var(--text-color);
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  flex-direction: column;
 }
+
+.navigation_btn2{
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-left: -5px;
+}
+.func_icon{
+  display: flex;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  cursor: pointer;
+
+}
+.func_icon:first-child{
+  background-color: rgb(237, 101, 93)
+
+}
+.func_icon:nth-child(2){
+  background-color: rgb(254, 188, 46);
+}
+.func_icon:nth-child(3){
+  background-color: rgb(40, 200, 64);
+}
+
 .page_container {
   width: 100%;
   height: 100%;

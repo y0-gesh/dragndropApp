@@ -5,7 +5,7 @@ import ParaView from "./ParaView";
 import { useStateContext } from "../context/ContextProvider";
 
 const DropArea = () => {
-  const {files, setFiles} = useStateContext();
+  const { files, setFiles } = useStateContext();
   const inputRef = useRef(null);
 
   const handleDrapOver = (e) => {
@@ -39,6 +39,9 @@ const DropArea = () => {
         <ParaView files={files} />
       </div>
     );
+    const handleClose = () => {
+      window.api.send("closeApp");
+    };
 
   return (
     <>
@@ -47,6 +50,9 @@ const DropArea = () => {
           className="drop-area-container "
           onDragOver={handleDrapOver}
           onDrop={handleDrop}>
+          <div className="navigation_btn1">
+            <span className="close_icon" onClick={handleClose}></span>
+          </div>
           <div className="drop_circle" onClick={() => inputRef.current.click()}>
             <div className="drop_circle_inside">
               <input

@@ -3,11 +3,12 @@ const path = require("node:path");
 const ipc = ipcMain;
 
 const createWindow = () => {
+
   const win = new BrowserWindow({
-    width: 1200,
+    width: 500,
     height: 680,
-    minWidth: 940,
-    minHeight: 560,
+    // minWidth: 940,
+    // minHeight: 560,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: true,

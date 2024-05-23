@@ -57,7 +57,7 @@ function App() {
 
   return (
     <div className="App">
-      <nav className="navbar">
+      {/* <nav className="navbar">
         <div className="drag-header"></div>
         <div className="funcBtn">
           <button id="minimizeBtn" className="bn3637 bn38" ref={minimizeBtnRef}>
@@ -70,7 +70,8 @@ function App() {
             <img src={closeWin} className="close_win" alt="close" />
           </button>
         </div>
-      </nav>
+      </nav> */}
+      <div className="dragable_area"></div>
       <div className="app_container">
         <div className="drop_area">
           <DropArea />

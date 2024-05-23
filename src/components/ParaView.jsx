@@ -17,13 +17,19 @@ const ParaView = (props) => {
     setFiles(null);
   };
 
-  
-
   const handleUpload = () => {};
 
+  const handleWindowControl = (action) => {
+    window.api.send(action);
+  };
   return (
     <div className="para-view-container">
       <div className="page_container">
+        <div className="navigation_btn2">
+        <span className="func_icon" onClick={() => handleWindowControl("closeApp")}></span>
+        <span className="func_icon" onClick={() => handleWindowControl("minimizeApp")}></span>
+        <span className="func_icon" onClick={() => handleWindowControl("toggleMaximizeApp")}></span>
+        </div>
         <div className="page_title">
           <h1 className="heading">MED2XDMF</h1>
           <img src={AvkalanLabs} className="logo_avkalan" alt="Avkalan Labs" />

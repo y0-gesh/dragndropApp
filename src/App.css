@@ -53,18 +53,24 @@
 .navbar li {
   list-style: none;
 }
+.dragable_area{
+  width: 100vw;
+  height: 30px;
+  -webkit-app-region: drag;
+}
 
 .app_container {
   display: flex;
   /* justify-content: space-evenly; */
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  /* height: 95vh; */
+
 }
 .drop_area {
   /* margin-top: 150px; */
   /* margin-left: 60px; */
 }
 .para_view {
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
