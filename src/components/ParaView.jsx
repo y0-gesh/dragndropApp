@@ -6,6 +6,9 @@ import casino from "../assets/casino.svg";
 import line from "../assets/cross_x.svg";
 import triangle from "../assets/cross_x.svg";
 import arrowRight from "../assets/right_arrow.svg";
+import closeWindow from "../assets/close_window.svg";
+import miniWindow from "../assets/minimize_window_color.svg";
+import maxiWindow from "../assets/expand_window.svg";
 
 import { useStateContext } from "../context/ContextProvider";
 
@@ -25,10 +28,25 @@ const ParaView = (props) => {
   return (
     <div className="para-view-container">
       <div className="page_container">
-        <div className="navigation_btn2">
-        <span className="func_icon" onClick={() => handleWindowControl("closeApp")}></span>
-        <span className="func_icon" onClick={() => handleWindowControl("minimizeApp")}></span>
-        <span className="func_icon" onClick={() => handleWindowControl("toggleMaximizeApp")}></span>
+        <div className="navbar__window2">
+          <div className="navigation_btn2">
+            <span
+              className="func_icon"
+              onClick={() => handleWindowControl("closeApp")}>
+              <img src={closeWindow} className="window" alt="close" />
+            </span>
+            <span
+              className="func_icon"
+              onClick={() => handleWindowControl("minimizeApp")}>
+              <img src={miniWindow} className="window" alt="close" />
+            </span>
+            <span
+              className="func_icon"
+              onClick={() => handleWindowControl("toggleMaximizeApp")}>
+              <img src={maxiWindow} className="window" alt="close" />
+            </span>
+          </div>
+          <div className="dragable_area2"></div>
         </div>
         <div className="page_title">
           <h1 className="heading">MED2XDMF</h1>

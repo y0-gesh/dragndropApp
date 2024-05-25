@@ -71,15 +71,12 @@ function App() {
           </button>
         </div>
       </nav> */}
-      <div className="dragable_area"></div>
-      <div className="app_container">
+      {/* <div className="dragable_area"></div> */}
         <div className="drop_area">
           <DropArea />
         </div>
-        {/* <div className="para_view">
-          <ParaView />
-        </div> */}
-      </div>
+      {/* <div className="app_container">
+      </div> */}
     </div>
   );
 }

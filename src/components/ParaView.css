@@ -3,7 +3,7 @@
   height: 600px;
   width: 450px;
   padding: 30px;
-  padding-top: 15px;
+  padding-top: 0px;
   color: var(--text-color);
   border-radius: 10px;
   display: flex;
@@ -11,33 +11,52 @@
   /* align-items: center; */
   flex-direction: column;
 }
-
-.navigation_btn2{
+.dragable_area2 {
+  width: 100%;
+  height: 30px;
+  position: relative;
+  -webkit-app-region: drag;
+}
+.navbar__window2 {
+  width: inherit;
+  position: relative;
+  display: flex;
+  top: 0px;
+  margin-bottom: 30px;
+  height: 22px;
+}
+.navigation_btn2 {
   z-index: 1000;
+  position: relative;
   display: flex;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-top: 18px;
   margin-left: -5px;
 }
-.func_icon{
+.func_icon {
   display: flex;
   width: 12px;
   height: 12px;
   border-radius: 100%;
   cursor: pointer;
-
 }
-.func_icon:first-child{
-  background-color: rgb(237, 101, 93)
-
+.func_icon:first-child {
+  background-color: rgb(237, 101, 93);
 }
-.func_icon:nth-child(2){
+.func_icon:nth-child(2) {
   background-color: rgb(254, 188, 46);
 }
-.func_icon:nth-child(3){
+.func_icon:nth-child(3) {
   background-color: rgb(40, 200, 64);
 }
 
+.navigation_btn2 .func_icon .window {
+  opacity: 0;
+  transition: 0.3s all ease-out;
+}
+.navigation_btn2 .func_icon .window:hover {
+  opacity: 1;
+}
 .page_container {
   width: 100%;
   height: 100%;
@@ -98,45 +117,45 @@
   overflow: auto;
   box-sizing: border-box;
 }
-.para_button{
-    display: flex;
-    justify-content: space-between;
-    margin: 25px 0px;
+.para_button {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0px;
 }
 .bn4 {
-    border: none;
-    color: white;
-    padding: 17px 0px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
-    width: 47%;
-    opacity: 1;
-    transition: 0.3s;
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 10px;
-  }
-  .cancel-btn{
-    background-color: var(--fillcontainer-color);
-  }
-  .para-btn{
-    background-color: var(--droparea-color);
-  }
-  
-  .bn4:hover {
-   background-color: rgb(31, 135, 255);
-  }
-  .output_list{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .output_list div{
-    display: flex;
-    align-items: center;
-  }
-  .output_list div span{
-    margin-left: 10px;
-  }
+  border: none;
+  color: white;
+  padding: 17px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  width: 47%;
+  opacity: 1;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.cancel-btn {
+  background-color: var(--fillcontainer-color);
+}
+.para-btn {
+  background-color: var(--droparea-color);
+}
+
+.bn4:hover {
+  background-color: rgb(31, 135, 255);
+}
+.output_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.output_list div {
+  display: flex;
+  align-items: center;
+}
+.output_list div span {
+  margin-left: 10px;
+}

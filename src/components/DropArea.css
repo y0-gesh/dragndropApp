@@ -1,4 +1,4 @@
-.drop-area-container {
+.drop_area_container {
   background-color: var(--backgroundfill-color);
   height: 300px;
   width: 300px;
@@ -8,20 +8,40 @@
   justify-content: center;
   align-items: center;
 }
-
-.navigation_btn1{
+.dragable_area {
+  width: 100%;
+  /* height: 30px; */
+  position: relative;
+  -webkit-app-region: drag;
+}
+.navbar_window {
+  width: inherit;
+  position: absolute;
+  display: flex;
+  top: 0px;
+  height: 22px;
+}
+.navigation_btn1 {
   z-index: 1000;
   position: relative;
-  left: -8px;
-  top: -130px;
+  left: 15px;
+  top: 15px;
 }
-.close_icon{
+.close_icon {
   display: flex;
   width: 12px;
   height: 12px;
   background-color: rgb(239 68 68);
   border-radius: 100%;
   cursor: pointer;
+}
+
+.navigation_btn1 .close_icon .close_window {
+  opacity: 0;
+  transition: 0.3s all ease-out;
+}
+.navigation_btn1 .close_icon .close_window:hover {
+  opacity: 1;
 }
 
 .drop_circle {
@@ -59,11 +79,11 @@
   display: flex;
   justify-content: center;
 }
-.drop-area-container .upload{
-    max-width: 65%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.drop-area-container .upload {
+  max-width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .drop-area-container .upload ul {
   list-style-type: circle;

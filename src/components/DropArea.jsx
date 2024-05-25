@@ -1,8 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./DropArea.css";
 import uploadImg from "../assets/upload.svg";
 import ParaView from "./ParaView";
 import { useStateContext } from "../context/ContextProvider";
+
+import closeWindow from "../assets/close_window.svg";
 
 const DropArea = () => {
   const { files, setFiles } = useStateContext();
@@ -39,19 +41,24 @@ const DropArea = () => {
         <ParaView files={files} />
       </div>
     );
-    const handleClose = () => {
-      window.api.send("closeApp");
-    };
+  const handleClose = () => {
+    window.api.send("closeApp");
+  };
 
   return (
     <>
       {!files && (
         <div
-          className="drop-area-container "
+          className="drop_area_container"
           onDragOver={handleDrapOver}
           onDrop={handleDrop}>
-          <div className="navigation_btn1">
-            <span className="close_icon" onClick={handleClose}></span>
+          <div className="navbar_window">
+            <div className="navigation_btn1">
+              <span className="close_icon" onClick={handleClose}>
+                <img src={closeWindow} className="close_window" alt="close" />
+              </span>
+            </div>
+            <div className="dragable_area"></div>
           </div>
           <div className="drop_circle" onClick={() => inputRef.current.click()}>
             <div className="drop_circle_inside">

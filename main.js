@@ -7,14 +7,14 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 500,
     height: 680,
-    // minWidth: 940,
-    // minHeight: 560,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: true,
       devTools: true,
       preload: path.join(__dirname, "./preload.js"),
     },
+    frame: false,
+    transparent: true, 
     titleBarStyle: "hidden",
   });
 
