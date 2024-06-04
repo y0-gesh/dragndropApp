@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ParaView.css";
 import AvkalanLabs from "../assets/avkalanlabsjpg.jpg";
 import mesh from "../assets/casino.svg";
@@ -13,14 +13,18 @@ import maxiWindow from "../assets/expand_window.svg";
 import { useStateContext } from "../context/ContextProvider";
 
 const ParaView = (props) => {
-  const { setFiles } = useStateContext();
+  const { files, setFiles } = useStateContext();
 
   const handleCancel = (e) => {
     e.preventDefault();
     setFiles(null);
   };
 
-  const handleUpload = () => {};
+  const OpenParaview = async () => {
+    // const file = props.files[0];
+    // const convertedFile = convertFileToXdmf(file);
+    // openInParaview(convertedFile);
+  };
 
   const handleWindowControl = (action) => {
     window.api.send(action);
@@ -104,7 +108,7 @@ const ParaView = (props) => {
             onClick={handleCancel}>
             Cancel
           </button>
-          <button type="button" className="bn4 para-btn" onClick={handleUpload}>
+          <button type="button" className="bn4 para-btn" onClick={OpenParaview}>
             Open in ParaView
           </button>
         </div>

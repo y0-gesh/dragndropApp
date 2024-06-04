@@ -56,7 +56,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="app">
       {/* <nav className="navbar">
         <div className="drag-header"></div>
         <div className="funcBtn">
