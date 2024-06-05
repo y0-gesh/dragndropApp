@@ -4,8 +4,9 @@ const ipc = ipcMain;
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 500, 
-    height: 680,
+    width: 450, 
+    height: 660,
+    resizable: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: true,

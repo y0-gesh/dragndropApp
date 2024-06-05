@@ -1,15 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import "./App.css";
 import DropArea from "./components/DropArea";
-import ParaView from "./components/ParaView";
-import minimizeWin from "./assets/minimize_window.svg";
-import maximizeWin from "./assets/maximize_window.svg";
-import closeWin from "./assets/close.svg";
 
 function App() {
   const minimizeBtnRef = useRef(null);
-  const maximizeBtnRef = useRef(null); // Reference for the maximize button
-  const closeBtnRef = useRef(null); // Reference for the close button
+  const maximizeBtnRef = useRef(null);
+  const closeBtnRef = useRef(null);
 
   useEffect(() => {
     const minimizeBtn = minimizeBtnRef.current;
@@ -57,26 +53,9 @@ function App() {
 
   return (
     <div className="app">
-      {/* <nav className="navbar">
-        <div className="drag-header"></div>
-        <div className="funcBtn">
-          <button id="minimizeBtn" className="bn3637 bn38" ref={minimizeBtnRef}>
-            <img src={minimizeWin} className="minimize_win" alt="minimize" />
-          </button>
-          <button id="maximizeBtn" ref={maximizeBtnRef}>
-            <img src={maximizeWin} className="maximize_win" alt="maximize" />
-          </button>
-          <button id="closeBtn" ref={closeBtnRef}>
-            <img src={closeWin} className="close_win" alt="close" />
-          </button>
-        </div>
-      </nav> */}
-      {/* <div className="dragable_area"></div> */}
-        <div className="drop_area">
-          <DropArea />
-        </div>
-      {/* <div className="app_container">
-      </div> */}
+      <div className="drop_area">
+        <DropArea />
+      </div>
     </div>
   );
 }
