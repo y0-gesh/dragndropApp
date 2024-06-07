@@ -44,20 +44,21 @@ const DropArea = () => {
 
   return (
     <>
-      {!files && (
-        <div
-          className="drop_area_container"
-          onDragOver={handleDrapOver}
-          onDrop={handleDrop}>
-          <div className="navbar_window">
-            <div className="navigation_btn1">
-              <span className="close_icon" onClick={handleClose}>
-                <img src={closeWindow} className="close_window" alt="close" />
-              </span>
-            </div>
-            <div className="dragable_area"></div>
+    {!files && (
+      <div className="drop_area_container" onDragOver={handleDrapOver} onDrop={handleDrop}>
+        <div className="navbar_window">
+          <div className="navigation_btn1">
+            <span className="close_icon" onClick={handleClose}>
+              <img src={closeWindow} className="close_window" alt="close" />
+            </span>
           </div>
-          <div className="drop_circle" onClick={() => inputRef.current.click()}>
+          <div className="dragable_area"></div>
+        </div>
+        <div
+          className={`c-p ${loading ? "animate_out" : ""}`}
+          onClick={() => inputRef.current.click()}>
+          <div className="cc"></div>
+          <div className={`in_c ${loading ? "animate_in" : ""}`}>
             {loading ? (
               <Loader />
             ) : (
@@ -73,14 +74,16 @@ const DropArea = () => {
               </div>
             )}
           </div>
+          <div className="cd"></div>
         </div>
-      )}
-      {files && (
-        <div className="para_view">
-          <ParaView files={files} />
-        </div>
-      )}
-    </>
+      </div>
+    )}
+    {files && (
+      <div className="para_view">
+        <ParaView files={files} />
+      </div>
+    )}
+  </>
   );
 };
 

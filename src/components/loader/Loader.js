@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./Loader.css";
+// import "./Loader.css";
+import "./TestCircle.css";
+import uploadImg from "../../assets/upload.svg";
 
 function Loader() {
   const [counter, setCounter] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,16 +21,8 @@ function Loader() {
   }, []);
 
   return (
-    <div className="circle-wrap">
-      <div className="circle">
-        <div className="mask full">
-          <div className="fill"></div>
-        </div>
-        <div className="mask half">
-          <div className="fill"></div>
-        </div>
-        <div className="inside-circle"> {counter}% </div>
-      </div>
+    <div>
+      <div> {counter}% </div>
     </div>
   );
 }
